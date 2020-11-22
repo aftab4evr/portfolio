@@ -1,13 +1,754 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  background: #fff;
+  height: 100vh;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
+ /* Nav Bar */
+
+ .nav-container {
+   position: fixed;
+   top: 0;
+   z-index: 1;
+   display: flex;
+   font-family: "Exo 2", sans-serif;
+   background-color: lightgrey;
+   flex-direction: row;
+   padding: 1.2rem;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   height: 9vh;
+ }
+ .nav-container.active {
+   background: lightgrey;
+   height: 9vh;
+   border-radius: 5px;
+ }
+ .logo {
+   font-family: "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive;
+   font-size: 1.8rem;
+   color: #4749a8;;
+   cursor: pointer;
+ }
+ .link {
+   list-style-type: none;
+   float: left;
+ }
+
+ .nav-links .anchor {
+   display: inline-block;
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+     sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 9.1vh;
+   margin: 0.8rem;
+ }
+ 
+ .nav-links .anchor:hover {
+   color: #55198b;
+ }
+ 
+ .anchor.active {
+   color: #55198b;
+   font-weight: 800;
+   border-bottom: 2px solid #55198b;
+ }
+ 
+ .menu-icon {
+   display: none;
+ }
+
+  /* Home */
+
+  .welcome-content {
+    color: gray;
+  }
+  .home-container {
+   font-family: "Varela Round", sans-serif;
+   display: flex;
+   color: #55198b;
+   flex-direction: row;
+   background-color: white;
+   height: 100%;
+   padding: 1rem;
+   align-items: center;
+   width: 100%;
+   min-height: 100vh;
+ }
+ .content-container {
+   width: 50vw;
+   height: 100%;
+   flex-direction: column;
+   display: flex;
+   padding: 1.8rem;
+   margin-top: 3rem;
+   justify-content: center;
+ }
+ .main-content {
+   font-size: 3rem;
+ }
+ .skill-content {
+   margin: 0.6rem 0;
+   color: #9c72be;
+   font-family: "Varela Round", sans-serif;
+   font-weight: 400;
+   font-size: 1.6rem;
+ }
+ .skill-animation {
+   height: 60px;
+   width: 100%;
+   margin: 2rem 0;
+   text-shadow: 5px 5px 5px grey;
+ }
+ .hand {
+   display: inline-block;
+   margin: 0.9rem;
+   cursor: pointer;
+ }
+ .png {
+   width: 75%;
+
+ }
+ .moonpay{
+   width: 30%;
+ }
+ .png-container {
+   /* margin-top: 1.5rem; */
+   width: 50vw;
+   height: 12rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ 
+ .button{
+   background-color: #55198b;
+   border: 1px solid #55198b;
+   color: #fff;
+   width: 25%;
+   height: 50px;
+   border-radius: 6px;
+   text-align: center;
+   width: -webkit-max-content;
+   width: -moz-max-content;
+   width: max-content;
+   padding: 13px 22px;
+   text-transform: uppercase;
+   text-decoration: none;
+   display: inline;
+   flex-direction: row;
+   outline: none;
+   font-size: 1rem;
+   font-weight: 700;
+   cursor: pointer;
+   margin-top: 3.6rem;
+   align-items: center;
+   transition: all 0.3s ease-in-out 0s;   
+ }
+ 
+ .button:hover {
+   background-color: #fff;
+   color: #55198b;
+   transition: all 0.3s ease-in-out 0s;
+   transform: translateY(-3px);
+   text-decoration: none;
+ }
+ 
+ /* services Container */
+
+ .services-container {
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   display: flex;
+   margin-top: -2rem;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-family: "Exo 2", sans-serif;
+   color: rgb(0, 0, 0);
+   font-size: 1.3rem;
+   padding: 2rem;
+   
+ }
+ .service-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-top: 1rem; */
+    height: 90vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+ }
+ .services {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   text-align: center;
+   width: 400px;
+   margin: 1rem;
+   height: 12rem;
+   box-shadow: 3px 2px 10px #55198b;
+   padding: 3rem;
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   
+   
+ }
+ .services:hover {
+   border: 1px solid gray;
+ }
+ .services img {
+   height: 3.7rem;
+ }
+ .services li {
+   list-style-type: none;
+   font-family: "Varela Round", sans-serif;
+   font-size: 1rem;
+   font-weight: 700;
+ }
+
+ /* Skills */
+.skills-container {
+ display: flex;
+ margin-top: 5rem;
+ flex-direction: column;
+ align-items: center;
+ font-family: "Exo 2", sans-serif;
+ font-size: 1.3rem;
+ padding: 2rem;
+ justify-content: space-evenly;
+ width: 100%;
+ min-height: 80vh;
+ color: rgb(0, 0, 0);
+}
+.skills-container h1 {
+ margin: 2rem 0;
+}
+.techs {
+ align-items: center;
+ flex-wrap: wrap;
+ width: 100%;
+ min-height: 12vh;
+ justify-content: space-evenly;
+ display: flex;
+ padding: 3rem;
+ box-shadow: 3px 2px 10px #55198b;
+ border-radius: 20px;
+ text-align: center;
+ margin: 2rem;
+
+}
+.techs:hover {
+ border: 1px solid #55198b;
+}
+.techs i {
+ margin: 1.1rem;
+ font-size: 4.8rem;
+
+}
+.techs li {
+ list-style-type: none;
+ font-family: "Varela Round", sans-serif;
+ font-size: 1rem;
+ font-weight: 700;
+
+ 
+}
+
+/* PortFolio Container */
+
+.portfolio-container {
+ font-family: "Exo 2", sans-serif;
+ display: flex;
+ color: rgb(0, 0, 0);
+ font-size: 1.3rem;
+ flex-direction: column;
+ padding: 1rem;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 100%;
+ min-height: 100vh;
+}
+.portfolio-container h1 {
+ margin: 3rem 0;
+}
+.projects-container {
+ min-height: 60vh;
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+}
+.projects {
+ height: 23rem;
+ width: 21rem;
+ margin: 1rem;
+ box-shadow: 3px 2px 10px #55198b;
+ cursor: pointer;
+ border-radius: 10px;
+}
+.projects-images {
+ border-radius: 10px;
+ cursor: pointer;
+ width: 100%;
+ height: 60%;
+ border-bottom: 1px solid black;
+ 
+}
+
+/* Images */
+#todoApp {
+ background-image: url("./images//docslam.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+#stopWatch{
+ background-image: url("./images/clasic.jpeg");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+#snakeGame{
+ /* background-image: url("./images/snake-game.png"); */
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+}
+#calculator{
+ /* background-image: url("./images/calculator.png"); */
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+
+}
+#saylani{
+ /* background-image: url("./images/Saylani.png"); */
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+
+}
+.project-links .text {
+ width: 100%;
+ height: 50%;
+ color: black;
+ font-family: "Varela Round", sans-serif;
+ font-size: 0.8rem;
+ display: flex;
+ align-items: center;
+ padding-top: 15px;
+ justify-content: center;
+ font-weight:bold ;
+}
+.project-links {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 30%;
+ justify-content: center;
+ align-items: center;
+}
+.project-links .icons{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.icons #github{
+ background-color: rgb(51, 51, 51);
+}
+.icons #github:hover {
+ background-color: rgb(15, 15, 15);
+}
+
+.icons #github  {
+ color: white;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 1.3rem;
+ height: 2.6rem;
+ line-height: 2.6rem;
+ position: relative;
+ text-align: center;
+ user-select: none;
+ width: 2.6rem;
+ border-radius: 2.6rem;
+ margin: 0px 5px 10px;
+ transition: all 0.2s ease-in 0s;
+} 
+
+/* Contact */
+.contact-container {
+ font-family: "Exo 2", sans-serif;
+ display: flex;
+ color: rgb(0, 0, 0);
+ font-size: 1.3rem;
+ flex-direction: column;
+ padding: 2rem;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 100%;
+ min-height: 100vh;
+}
+.profile-image{
+ background-image: url("./images/profile.jpeg");
+ border-radius: 50%;
+ width: 170px;
+ height: 170px;
+ background-size: cover;
+ border: 1px solid black;
+ box-shadow: 6px 6px 10px gray;
+ margin: 1rem;
+}
+.cards-container{
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ align-items: center;
+ width: 100%;
+ flex-wrap: wrap;
+ min-height: 40vh;
+}
+.cards {
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ display: flex;
+ box-shadow: 3px 2px 10px gray;
+ border-radius: 20px;
+ flex-direction: column;
+ width: 19rem;
+ height: 9rem;
+ margin: 1rem;
+ padding: 1.3rem 0;
+}
+.cards:hover{
+ border: 1px solid gray;
+}
+.contact-icons {
+ display: flex;
+ align-items: center;
+ width: 100%;
+ height: 33.33%;
+ text-align: center;
+ justify-content: center;
+ list-style-type: none;
+ color: red;
+}
+
+.contact-text {
+ display: flex;
+ margin-top: 0.7rem;
+ width: 100%;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+ height: 33.33%;
+ font-size: 1rem;
+ align-items: center;
+ justify-content: center;
+}
+.contact-links {
+ margin-top: 0.7rem;
+ display: flex;
+ font-size: 1rem;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+ width: 90%;
+ height: 33.33%;
+ align-items: center;
+ justify-content: center;
+}
+
+.contact-links > span {
+ display: block;
+}
+
+.contact-links i {
+ cursor: pointer;
+ margin: 0.3rem;
+ display: block;
+ font-size: 1.3rem;
+ position: relative;
+ text-align: center;
+ padding: 0.1rem;
+ user-select: none;
+}
+
+.contact-links a {
+ text-decoration: none;
+}
+
+.contact-links i:hover {
+ box-shadow: 2px 2px 4px gray;
+ border-radius: 20%;
+}
+.contact-links #github {
+ color: rgba(0, 0, 0, 0.884);
+}
+
+.contact-links:hover #github {
+ color: rgb(0, 0, 0);
+}
+
+.contact-links #facebook {
+ color: rgba(28, 28, 231, 0.938);
+}
+
+.contact-links:hover #facebook {
+ color: rgb(28, 28, 231);
+}
+.contact-links #linkedin {
+ color: #3d8eb7ea;
+}
+
+.contact-links:hover #linkedin {
+ color: #3d8eb7;
+}
+.contact-links #instagram {
+ color: rgba(214, 84, 45, 0.89);
+}
+
+.contact-links:hover #instagram {
+ color: rgb(214, 84, 45);
+}
+.contact-links #whatsaap {
+ color: lightgreen;
+}
+
+.contact-links:hover #whatsaap {
+ color: green;
+}
+.contact-icons i {
+ color: #f35166;
+ cursor: pointer;
+ font-size: 1.7rem;
+ position: relative;
+ user-select: none;
+ transition: all 0.2s ease-in 0s;
+}
+.footer-container{
+ font-family: "Exo 2", sans-serif;
+ display: flex;
+ color: black;
+ font-size: 0.7rem;
+ padding: 2rem;
+ border-top: 2px solid black;
+ align-items: center;
+ justify-content: space-evenly;
+ width: 100%;
+ height: 8vh;
+}
+/* Footer Container */
+.footer-container a {
+ text-decoration: none;
+ font-family: "Varela Round", sans-serif;
+
+ color: #ccb1df;
+ text-shadow: 1px 1px 1px black;
+}
+
+.footer-container a:hover {
+ color: #48197ec5;
+}
+
+/* General */
+.button:hover {
+ background-color: #fff;
+ color: #55198b;
+ transition: all 0.3s ease 0s;
+ transform: translateY(-3px);
+ text-decoration: none;
+}
+
+.button-link {
+ text-decoration: none;
+}
+
+.button {
+ background-color: #55198b;
+ border: 1px solid #55198b;
+ color: #fff;
+ 
+ font-weight: 700;
+ width: -webkit-max-content;
+ width: -moz-max-content;
+ width: max-content;
+ padding: 13px 22px;
+ text-transform: uppercase;
+ border-radius: 6px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ outline: none;
+ margin-top: 3.6rem;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: all 0.3s ease-in-out 0s;
+}
+
+.heading {
+ margin: 2rem 0;
+ font-family: "Varela Round", sans-serif;
+ color: black;
+}
+
+/* Media Queries */
+/* 1150 Breakpoint */
+@media screen and (max-width: 1150px) {
+ .home-container {
+   flex-direction: column;
+ }
+ .content-container {
+   padding-top: 5rem;
+   width: 100vw;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ .svg-container {
+   width: 100vw;
+ }
+}
+
+/*900 Mobile Nav Version */
+
+@media screen and (max-width: 900px) {
+ .nav-links {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   min-height: 500px;
+   position: absolute;
+   top: 9vh;
+   text-align: center;
+   align-items: center;
+   left: -100%;
+   opacity: 1;
+   transition: all 0.5s ease;
+ }
+
+ .nav-links.active {
+   background: rgba(255, 255, 255, 0.911);
+   left: 0;
+   opacity: 1;
+   transition: all 0.5s ease;
+   z-index: 1;
+ }
+
+ .menu-icon {
+   display: block;
+   position: relative;
+   margin: 0 1rem;
+   font-size: 1.8rem;
+   cursor: pointer;
+ }
+
+ .nav-links .anchor {
+   display: block;
+   line-height: 9.1vh;
+   width: 100vw;
+   margin: 0.4rem;
+ }
+
+ .anchor.active {
+   color: white;
+   font-weight: 800;
+   border: none;
+   background: rgba(0, 0, 0, 0.534);
+ }
+
+ .nav-links.active .anchor:hover {
+   color: black;
+ }
+}
+
+/* 700 */
+
+@media screen and (max-width: 700px) {
+ .svg-container {
+   margin-top: 1.5rem;
+   width: 50vw;
+   height: 36rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .svg {
+   height: 60%;
+ }
+}
+
+/* 550 */
+@media screen and (max-width: 550px) {
+ .content-container {
+   font-size: 0.7rem;
+ }
+
+ .main-content {
+   font-size: 2rem;
+ }
+
+ .skill-content {
+   margin: 0.6rem 0;
+   font-size: 1.2rem;
+   
+ }
+
+ .hand {
+   font-size: 1.8rem;
+ }
+
+ .welcome-content {
+   font-size: 0.7rem;
+ }
+}
+
+/* 500 */
+@media screen and (max-width: 500px) {
+ .svg {
+   height: 40%;
+ }
+}
+
+/* 415 */
+
+@media screen and (max-width: 415px) {
+ .skill-content {
+   font-size: 1rem;
+ }
+}
+
+/* 395*/
+
+@media screen and (max-width: 395px) {
+ .heading {
+   font-size: 1.2rem;
+ }
+ .button {
+   font-size: 0.8rem;
+ }
 }
